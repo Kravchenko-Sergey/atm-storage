@@ -65,7 +65,7 @@ export default function Home() {
                   <div className='flex items-center justify-between gap-4'>
                     <div className='min-w-[150px] text-start'>{item.fullName}</div>
                     <div className='flex gap-1'>
-                      {item.image.map((image, index) => (
+                      {item.image.map((image: string, index: number) => (
                         <Image key={index} src={image} alt='Item image' width={24} height={24} className='rounded-sm' />
                       ))}
                     </div>
