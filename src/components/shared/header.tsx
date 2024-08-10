@@ -3,7 +3,7 @@
 import Container from '@/components/shared/container'
 import Link from 'next/link'
 import Image from 'next/image'
-import { OctagonAlert, Search } from 'lucide-react'
+import { Calculator, Search } from 'lucide-react'
 import { TextField } from '@/components/ui/text-field'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
@@ -67,7 +67,7 @@ export default function Header() {
                       className='flex items-center gap-3 px-3 py-2 hover:bg-primary/10 cursor-pointer'
                       onClick={handleClickItem}
                     >
-                      <OctagonAlert className='text-gray-400 rounded-sm h-6 w-6' />
+                      <Calculator className='text-gray-400 rounded-sm h-6 w-6' />
                       <span>{item.name}</span>
                     </Link>
                   )

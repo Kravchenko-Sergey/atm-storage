@@ -24,7 +24,7 @@ export const useEngineerStore = create<State>(set => ({
     {
       id: v4(),
       fullName: 'Луганский Максим',
-      image: ['/sber.webp', '/alfa.webp', '/raif.webp', '/pochta.webp', '/psb.webp'],
+      image: ['/sber.webp', '/alfa.webp', '/raif.webp', '/pochta.webp', '/psb.webp', '/otkrytiye.webp'],
       items: [
         { id: v4(), title: 'A1-1', name: 'Ingenico desk/3500', quantity: 7 },
         { id: v4(), title: 'A1-2', name: 'Ingenico ist250', quantity: 7 },

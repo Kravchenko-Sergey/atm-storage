@@ -27,7 +27,7 @@ export default function Home() {
                 <AccordionTrigger>
                   <div className='flex items-center justify-between gap-4'>
                     <span>{item.name}</span>
-                    <Image src={item.image} alt='Item image' width={24} height={24} />
+                    <Image src={item.image} alt='Item image' width={24} height={24} className='rounded-sm' />
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
