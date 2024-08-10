@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { useParams, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Description } from '@radix-ui/react-dialog'
-import { useStore } from '@/store/store'
+import { useStorageStore } from '@/store/storage-store'
 import Container from '@/components/shared/container'
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
 
 export default function ItemModal({ className }: Props) {
   const router = useRouter()
-  const storage = useStore(state => state.storage)
+  const storage = useStorageStore(state => state.storage)
   const { id } = useParams<{ id: string }>()
 
   const allItems = storage.flatMap(el => el.items.map(item => item))

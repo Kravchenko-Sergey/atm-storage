@@ -19,7 +19,7 @@ type State = {
   storage: Storage[]
 }
 
-export const useStore = create<State>(set => ({
+export const useStorageStore = create<State>(set => ({
   storage: [
     {
       id: v4(),

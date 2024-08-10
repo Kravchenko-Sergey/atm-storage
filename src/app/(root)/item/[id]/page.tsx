@@ -1,11 +1,11 @@
 'use client'
 
-import { useStore } from '@/store/store'
 import { useParams } from 'next/navigation'
 import Container from '@/components/shared/container'
+import { useStorageStore } from '@/store/storage-store'
 
 export default function Item() {
-  const storage = useStore(state => state.storage)
+  const storage = useStorageStore(state => state.storage)
   const { id } = useParams<{ id: string }>()
 
   const allItems = storage.flatMap(el => el.items.map(item => item))

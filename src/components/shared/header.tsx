@@ -7,13 +7,13 @@ import { OctagonAlert, Search } from 'lucide-react'
 import { TextField } from '@/components/ui/text-field'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import { useStore } from '@/store/store'
+import { useStorageStore } from '@/store/storage-store'
 
 export default function Header() {
   const [searchValue, setSearchValue] = useState('')
   const [focused, setFocused] = useState(false)
 
-  const storage = useStore(state => state.storage)
+  const storage = useStorageStore(state => state.storage)
 
   const allItems = storage
     .flatMap(el => el.items.map(item => item))
