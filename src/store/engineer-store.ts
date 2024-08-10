@@ -10,7 +10,7 @@ type Item = {
 
 type Engineer = {
   id: string
-  name: string
+  fullName: string
   image: string[]
   items: Item[]
 }
