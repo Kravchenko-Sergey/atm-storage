@@ -7,9 +7,12 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { useStorageStore } from '@/store/storage-store'
 import { useRouter } from 'next/navigation'
 import { useEngineerStore } from '@/store/engineer-store'
+import { useState } from 'react'
 
 export default function Home() {
   const router = useRouter()
+
+  const [value, setValue] = useState(0)
 
   const storage = useStorageStore(state => state.storage)
   const engineers = useEngineerStore(state => state.engineers)
@@ -42,7 +45,7 @@ export default function Home() {
                           <TableRow key={item2.id}>
                             <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
                             <TableCell className='flex gap-4'>
-                              <span>{item2.quantity}</span>
+                              <div>{item2.quantity}</div>
                             </TableCell>
                           </TableRow>
                         )

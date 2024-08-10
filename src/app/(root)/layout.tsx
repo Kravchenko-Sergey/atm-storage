@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/shared/header'
+import { Settings } from 'lucide-react'
 
 const APP_NAME = 'ATM STORAGE'
 const APP_DEFAULT_TITLE = 'My Awesome PWA App'
@@ -73,6 +74,9 @@ export default function RootLayout({
         </Suspense>
         {modal}
         {children}
+        <footer className='pb-4 text-gray-600 flex items-center justify-center'>
+          <Settings />
+        </footer>
       </body>
     </html>
   )

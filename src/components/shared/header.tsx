@@ -8,8 +8,10 @@ import { TextField } from '@/components/ui/text-field'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
 import { useStorageStore } from '@/store/storage-store'
+import { useRouter } from 'next/navigation'
 
 export default function Header() {
+  const router = useRouter()
   const [searchValue, setSearchValue] = useState('')
   const [focused, setFocused] = useState(false)
 
@@ -20,7 +22,8 @@ export default function Header() {
     .filter(item => item.name.toLowerCase().includes(searchValue.toLowerCase()))
     .slice(0, 6)
 
-  const handleClickItem = () => {
+  const handleClickItem = (id: string) => {
+    router.push(`/item/${id}`)
     setFocused(false)
     setSearchValue('')
   }
@@ -61,15 +64,14 @@ export default function Header() {
               >
                 {allItems.map((item: any) => {
                   return (
-                    <Link
+                    <div
                       key={item.id}
-                      href={`/item/${item.id}`}
                       className='flex items-center gap-3 px-3 py-2 hover:bg-primary/10 cursor-pointer'
-                      onClick={handleClickItem}
+                      onClick={() => handleClickItem(item.id)}
                     >
                       <Calculator className='text-gray-400 rounded-sm h-6 w-6' />
                       <span>{item.name}</span>
-                    </Link>
+                    </div>
                   )
                 })}
               </div>
