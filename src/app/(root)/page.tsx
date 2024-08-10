@@ -14,8 +14,6 @@ export default function Home() {
   const storage = useStorageStore(state => state.storage)
   const engineers = useEngineerStore(state => state.engineers)
 
-  console.log(storage)
-
   return (
     <main>
       <Container className='md:max-w-[1440px] m-auto'>
@@ -42,7 +40,7 @@ export default function Home() {
                       {item.items.map((item2: any) => {
                         return (
                           <TableRow key={item2.id}>
-                            <TableCell onClick={() => router.push(`/item/${item.id}`)}>{item2.name}</TableCell>
+                            <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
                             <TableCell className='flex gap-4'>
                               <span>{item2.quantity}</span>
                             </TableCell>
@@ -83,7 +81,7 @@ export default function Home() {
                       {item.items.map((item2: any) => {
                         return (
                           <TableRow key={item2.id}>
-                            <TableCell onClick={() => router.push(`/engineer/${item.id}`)}>{item2.name}</TableCell>
+                            <TableCell onClick={() => router.push(`/engineer/${item2.id}`)}>{item2.name}</TableCell>
                             <TableCell className='flex gap-4'>
                               <span>{item2.quantity}</span>
                             </TableCell>

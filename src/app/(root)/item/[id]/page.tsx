@@ -5,8 +5,8 @@ import Container from '@/components/shared/container'
 import { useStorageStore } from '@/store/storage-store'
 
 export default function Item() {
-  const storage = useStorageStore(state => state.storage)
   const { id } = useParams<{ id: string }>()
+  const storage = useStorageStore(state => state.storage)
 
   const allItems = storage.flatMap(el => el.items.map(item => item))
 
