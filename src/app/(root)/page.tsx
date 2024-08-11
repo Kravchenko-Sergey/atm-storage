@@ -8,6 +8,7 @@ import { useStorageStore } from '@/store/storage-store'
 import { useRouter } from 'next/navigation'
 import { useEngineerStore } from '@/store/engineer-store'
 import { CircleX } from 'lucide-react'
+import { TextField } from '@/components/ui/text-field'
 
 export default function Home() {
   const router = useRouter()
@@ -45,8 +46,10 @@ export default function Home() {
                           <TableRow key={item2.id}>
                             <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
                             <TableCell className='flex gap-4'>
-                              <input
+                              <TextField
                                 type='number'
+                                min={0}
+                                max={1000}
                                 defaultValue={item2.quantity}
                                 onChange={e => changeQuantity(item.id, item2.id, Number(e.target.value))}
                               />
