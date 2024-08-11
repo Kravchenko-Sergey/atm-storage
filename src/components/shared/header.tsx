@@ -41,7 +41,7 @@ export default function Header() {
             </div>
           </div>
         </Link>
-        <div className='w-full mx-10 flex-1'>
+        <div className='w-full flex-1 md:ml-8'>
           {focused && <div className='fixed top-0 left-0 bottom-0 right-0 bg-black/50 z-30'></div>}
           <div className='w-full flex rounded-2xl flex-1 justify-between relative h-11 z-30'>
             <Search className='absolute top-1/2 translate-y-[-50%] left-3 h-5 text-gray-400' />

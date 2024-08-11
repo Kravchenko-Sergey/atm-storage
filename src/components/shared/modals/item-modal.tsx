@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { Description } from '@radix-ui/react-dialog'
 import { useStorageStore } from '@/store/storage-store'
 import Container from '@/components/shared/container'
+import Image from 'next/image'
 
 interface Props {
   className?: string
@@ -42,6 +43,7 @@ export default function ItemModal({ className }: Props) {
         </DialogTitle>
         <div onSubmit={() => router.back()}>
           <Container className='h-[90%] flex items-start justify-between p-0 md:flex-col max-w-[1440px] m-auto'>
+            <Image src={item.image || ''} alt={item.name} width={240} height={240} className='self-center' />
             <div>
               <div>В коробке: {item.quantity} шт.</div>
               <div>Всего на складе: {totalQuantity} шт.</div>

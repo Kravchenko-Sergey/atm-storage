@@ -5,6 +5,7 @@ type Item = {
   id: string
   title: string
   name: string
+  image?: string
   quantity: number
 }
 
@@ -17,6 +18,8 @@ type Storage = {
 
 type State = {
   storage: Storage[]
+  changeQuantity: (itemId: string, id: string, newValue: number) => void
+  removeItem: (itemId: string, id: string) => void
 }
 
 export const useStorageStore = create<State>(set => ({
@@ -26,7 +29,7 @@ export const useStorageStore = create<State>(set => ({
       name: 'A1',
       image: '/sber.webp',
       items: [
-        { id: v4(), title: 'A1-1', name: 'Ingenico desk/3500', quantity: 7 },
+        { id: v4(), title: 'A1-1', name: 'Ingenico desk/3500', image: '/ingenico-desk-3500.webp', quantity: 7 },
         { id: v4(), title: 'A1-2', name: 'Ingenico ist250', quantity: 7 },
         { id: v4(), title: 'A1-3', name: 'Ingenico ist220', quantity: 8 }
       ]
@@ -110,5 +113,19 @@ export const useStorageStore = create<State>(set => ({
         { id: v4(), title: 'D3-2', name: 'Tactilion mini', quantity: 21 }
       ]
     }
-  ]
+  ],
+  changeQuantity: (itemId: string, id: string, newValue: number) =>
+    set(state => ({
+      storage: state.storage.map(item =>
+        item.id === itemId
+          ? { ...item, items: item.items.map(item2 => (item2.id === id ? { ...item2, quantity: newValue } : item2)) }
+          : item
+      )
+    })),
+  removeItem: (itemId: string, id: string) =>
+    set(state => ({
+      storage: state.storage.map(item =>
+        item.id === itemId ? { ...item, items: item.items.filter(item2 => item2.id !== id) } : item
+      )
+    }))
 }))

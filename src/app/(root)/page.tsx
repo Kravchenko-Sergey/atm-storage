@@ -7,15 +7,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { useStorageStore } from '@/store/storage-store'
 import { useRouter } from 'next/navigation'
 import { useEngineerStore } from '@/store/engineer-store'
-import { useState } from 'react'
+import { CircleX } from 'lucide-react'
 
 export default function Home() {
   const router = useRouter()
 
-  const [value, setValue] = useState(0)
-
   const storage = useStorageStore(state => state.storage)
   const engineers = useEngineerStore(state => state.engineers)
+  const changeQuantity = useStorageStore(state => state.changeQuantity)
+  const removeItem = useStorageStore(state => state.removeItem)
 
   return (
     <main>
@@ -45,7 +45,14 @@ export default function Home() {
                           <TableRow key={item2.id}>
                             <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
                             <TableCell className='flex gap-4'>
-                              <div>{item2.quantity}</div>
+                              <input
+                                type='number'
+                                defaultValue={item2.quantity}
+                                onChange={e => changeQuantity(item.id, item2.id, Number(e.target.value))}
+                              />
+                            </TableCell>
+                            <TableCell onClick={() => removeItem(item.id, item2.id)} className='p-0'>
+                              <CircleX className='w-4 h-4 text-[#d03135]' />
                             </TableCell>
                           </TableRow>
                         )
