@@ -43,7 +43,7 @@ export default function ItemModal({ className }: Props) {
         </DialogTitle>
         <div onSubmit={() => router.back()}>
           <Container className='h-[90%] flex items-start justify-between p-0 md:flex-col max-w-[1440px] m-auto'>
-            <Image src={item.image || ''} alt={item.name} width={240} height={240} className='self-center' />
+            {item.image && <Image src={item.image} alt={item.name} width={240} height={240} className='self-center' />}
             <div>
               <div>В коробке: {item.quantity} шт.</div>
               <div>Всего на складе: {totalQuantity} шт.</div>

@@ -5,7 +5,7 @@ type Item = {
   id: string
   title: string
   name: string
-  image?: string
+  image: string | null
   quantity: number
 }
 
