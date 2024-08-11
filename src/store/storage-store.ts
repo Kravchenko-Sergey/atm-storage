@@ -87,6 +87,12 @@ export const useStorageStore = create<State>(set => ({
     },
     {
       id: v4(),
+      name: 'C1',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
       name: 'C2',
       image: '/sber.webp',
       items: [
@@ -107,12 +113,78 @@ export const useStorageStore = create<State>(set => ({
     },
     {
       id: v4(),
+      name: 'D1',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'D2',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
       name: 'D3',
       image: '/sber.webp',
       items: [
         { id: v4(), title: 'D3-1', name: 'Tactilion', image: '/tactilion.webp', quantity: 19 },
         { id: v4(), title: 'D3-2', name: 'Tactilion mini', image: '/tactilion-mini.webp', quantity: 21 }
       ]
+    },
+    {
+      id: v4(),
+      name: 'E1',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'E2',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'E3',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'F1',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'F2',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'F3',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'G1',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'G2',
+      image: '/sber.webp',
+      items: []
+    },
+    {
+      id: v4(),
+      name: 'G3',
+      image: '/sber.webp',
+      items: []
     }
   ],
   changeQuantity: (itemId: string, id: string, newValue: number) =>

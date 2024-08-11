@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { useStorageStore } from '@/store/storage-store'
 import { useRouter } from 'next/navigation'
 import { useEngineerStore } from '@/store/engineer-store'
-import { CircleX } from 'lucide-react'
+import { CircleX, PackageOpen } from 'lucide-react'
 import { TextField } from '@/components/ui/text-field'
 
 export default function Home() {
@@ -33,35 +33,42 @@ export default function Home() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Название</TableHead>
-                        <TableHead>Количество</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {item.items.map((item2: any) => {
-                        return (
-                          <TableRow key={item2.id}>
-                            <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
-                            <TableCell className='flex gap-4'>
-                              <TextField
-                                type='number'
-                                min={0}
-                                max={1000}
-                                defaultValue={item2.quantity}
-                                onChange={e => changeQuantity(item.id, item2.id, Number(e.target.value))}
-                              />
-                            </TableCell>
-                            <TableCell onClick={() => removeItem(item.id, item2.id)} className='p-0'>
-                              <CircleX className='w-4 h-4 text-[#d03135]' />
-                            </TableCell>
-                          </TableRow>
-                        )
-                      })}
-                    </TableBody>
-                  </Table>
+                  {item.items.length ? (
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead>Название</TableHead>
+                          <TableHead>Количество</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {item.items.map((item2: any) => {
+                          return (
+                            <TableRow key={item2.id}>
+                              <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
+                              <TableCell className='flex gap-4'>
+                                <TextField
+                                  type='number'
+                                  min={0}
+                                  max={1000}
+                                  defaultValue={item2.quantity}
+                                  onChange={e => changeQuantity(item.id, item2.id, Number(e.target.value))}
+                                />
+                              </TableCell>
+                              <TableCell onClick={() => removeItem(item.id, item2.id)} className='p-0'>
+                                <CircleX className='w-4 h-4 text-[#d03135]' />
+                              </TableCell>
+                            </TableRow>
+                          )
+                        })}
+                      </TableBody>
+                    </Table>
+                  ) : (
+                    <div className='pb-8 text-gray-800 flex items-center justify-center gap-2'>
+                      <span>На этом стеллаже пусто!</span>
+                      <PackageOpen className='w-4 h-4' />
+                    </div>
+                  )}
                 </AccordionContent>
               </AccordionItem>
             ))}
