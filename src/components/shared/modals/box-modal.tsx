@@ -53,10 +53,14 @@ export default function BoxModal({ className }: Props) {
             />
 
             <div className='flex flex-col items-center sm:items-start'>
-              <div className='my-4 flex items-center gap-4 sm:flex-col sm:gap-1 sm:items-start'>
-                <div className='text-4xl font-extrabold '>{currentBox.items[0].brand}</div>
-                <div className='text-xl font-bold'>{currentBox.items[0].model}</div>
-              </div>
+              {currentBox.items[0].sn ? (
+                <div className='my-4 flex items-center gap-4 sm:flex-col sm:gap-1 sm:items-start'>
+                  <div className='text-4xl font-extrabold '>{currentBox.items[0].brand}</div>
+                  <div className='text-xl font-bold'>{currentBox.items[0].model}</div>
+                </div>
+              ) : (
+                <div className='pb-2 text-2xl font-bold'>{currentBox.items[0].name}</div>
+              )}
               <div>В коробке: {currentBox.items.length} шт.</div>
               <div>Всего на складе: {totalQuantity} шт.</div>
               <div>

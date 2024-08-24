@@ -122,7 +122,7 @@ export const useBoxesStore = create<State>(set => ({
     {
       id: v4(),
       title: 'A2-1',
-      productName: 'Ingenico desk/3500',
+      productName: 'Ingenico ipp220',
       image: '/sber.webp',
       items: [
         {
@@ -133,7 +133,7 @@ export const useBoxesStore = create<State>(set => ({
           name: 'Ingenico ipp220',
           sn: '11ewr1',
           bank: 'Сбербанк',
-          image: '/ingenico-ipp220.webp'
+          image: '/ingenico-ipp-220.webp'
         },
         {
           id: v4(),
@@ -143,7 +143,7 @@ export const useBoxesStore = create<State>(set => ({
           name: 'Ingenico ipp220',
           sn: '11ewfdr1',
           bank: 'Сбербанк',
-          image: '/ingenico-ipp220.webp'
+          image: '/ingenico-ipp-220.webp'
         },
         {
           id: v4(),

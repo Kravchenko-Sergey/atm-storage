@@ -44,7 +44,7 @@ export default function ItemModal({ className }: Props) {
                   <div className='text-xl font-bold'>{item.model}</div>
                 </div>
               ) : (
-                <div className='pb-2 font-bold'>{item.name}</div>
+                <div className='pb-2 text-2xl font-bold'>{item.name}</div>
               )}
               {item.sn && (
                 <div>
