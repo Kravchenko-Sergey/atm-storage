@@ -7,23 +7,27 @@ import { Calculator, Search } from 'lucide-react'
 import { TextField } from '@/components/ui/text-field'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import { useStorageStore } from '@/store/storage-store'
+import { Item, useBoxesStore } from '@/store/boxes-store'
 import { useRouter } from 'next/navigation'
 
 export default function Header() {
-  const router = useRouter()
+  const boxes = useBoxesStore(state => state.boxes)
   const [searchValue, setSearchValue] = useState('')
   const [focused, setFocused] = useState(false)
+  const router = useRouter()
 
-  const storage = useStorageStore(state => state.storage)
-
-  const allItems = storage
-    .flatMap(el => el.items.map(item => item))
-    .filter(item => item.name.toLowerCase().includes(searchValue.toLowerCase()))
+  const allItems = boxes
+    .flatMap(box => box.items)
+    .filter(
+      item =>
+        item.name.toLowerCase().includes(searchValue.toLowerCase()) |
+        item.sn.toLowerCase().includes(searchValue.toLowerCase())
+    )
     .slice(0, 6)
 
   const handleClickItem = (id: string) => {
     router.push(`/item/${id}`)
+
     setFocused(false)
     setSearchValue('')
   }
@@ -62,7 +66,7 @@ export default function Header() {
                   focused && 'visible opacity-100 top-12'
                 )}
               >
-                {allItems.map((item: any) => {
+                {allItems.map((item: Item) => {
                   return (
                     <div
                       key={item.id}

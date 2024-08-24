@@ -4,16 +4,47 @@ import Container from '@/components/shared/container'
 import Image from 'next/image'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
-import { useStorageStore } from '@/store/storage-store'
 import { useRouter } from 'next/navigation'
-import { useEngineerStore } from '@/store/engineer-store'
 import { PackageOpen } from 'lucide-react'
+import { Box, Cell, useBoxesStore } from '@/store/boxes-store'
+import { v4 } from 'uuid'
 
 export default function Home() {
   const router = useRouter()
 
-  const storage = useStorageStore(state => state.storage)
-  const engineers = useEngineerStore(state => state.engineers)
+  const boxes = useBoxesStore(state => state.boxes)
+
+  const cells =
+    boxes &&
+    boxes.reduce((acc, item) => {
+      const titlePrefix = item.title.split('-')[0] // Получаем префикс заголовка (например, "A1")
+
+      // Проверяем, существует ли уже объект с таким заголовком
+
+      let group = acc.find(g => g.title === titlePrefix)
+
+      if (!group) {
+        // Если нет, создаем новый объект
+        group = {
+          id: v4(),
+          title: titlePrefix,
+          boxes: []
+        }
+        acc.push(group)
+      }
+
+      // Добавляем текущий элемент в соответствующую группу
+      group.boxes.push({
+        id: item.id,
+        title: item.title,
+        productName: item.productName,
+        sn: item.sn,
+        image: item.image,
+        items: item.items
+      })
+
+      return acc
+    }, [])
 
   return (
     <main>
@@ -21,29 +52,31 @@ export default function Home() {
         <div className='flex flex-col'>
           <h2 className='text-xl self-center'>Склад</h2>
           <Accordion type='single' collapsible>
-            {storage.map((item: any, index) => (
-              <AccordionItem key={item.id} value={`item-${index + 1}`}>
+            {cells.map((cell: Cell, index) => (
+              <AccordionItem key={cell.id} value={`item-${index + 1}`}>
                 <AccordionTrigger>
                   <div className='flex items-center justify-between gap-4'>
-                    <span>{item.name}</span>
-                    <Image src={item.image} alt='Item image' width={24} height={24} className='rounded-sm' />
+                    <span>{cell.title}</span>
+                    <Image src={cell.boxes[0].image} alt='Item image' width={24} height={24} className='rounded-sm' />
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  {item.items.length ? (
+                  {cell.boxes.length ? (
                     <Table>
                       <TableHeader>
                         <TableRow>
+                          <TableHead>Ящик</TableHead>
                           <TableHead>Название</TableHead>
-                          <TableHead>Количество</TableHead>
+                          <TableHead>Кол-во</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        {item.items.map((item2: any) => {
+                        {cell.boxes.map((box: Box) => {
                           return (
-                            <TableRow key={item2.id}>
-                              <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
-                              <TableCell className='flex gap-4'>{item2.quantity}</TableCell>
+                            <TableRow key={box.id}>
+                              <TableCell onClick={() => router.push(`/box/${box.id}`)}>{box.title}</TableCell>
+                              <TableCell>{box.productName}</TableCell>
+                              <TableCell className='flex gap-4'>{box.items.length}</TableCell>
                             </TableRow>
                           )
                         })}
@@ -55,47 +88,6 @@ export default function Home() {
                       <PackageOpen className='w-4 h-4' />
                     </div>
                   )}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-        <div className='flex flex-col'>
-          <h2 className='py-4 text-xl self-center'>Инженеры</h2>
-          <Accordion type='single' collapsible className='w-full'>
-            {engineers.map((item: any, index) => (
-              <AccordionItem key={item.id} value={`item-${index + 1}`}>
-                <AccordionTrigger>
-                  <div className='flex items-center justify-between gap-4'>
-                    <div className='min-w-[150px] text-start'>{item.fullName}</div>
-                    <div className='flex gap-1'>
-                      {item.image.map((image: string, index: number) => (
-                        <Image key={index} src={image} alt='Item image' width={24} height={24} className='rounded-sm' />
-                      ))}
-                    </div>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Название</TableHead>
-                        <TableHead>Количество</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {item.items.map((item2: any) => {
-                        return (
-                          <TableRow key={item2.id}>
-                            <TableCell onClick={() => router.push(`/engineer/${item2.id}`)}>{item2.name}</TableCell>
-                            <TableCell className='flex gap-4'>
-                              <span>{item2.quantity}</span>
-                            </TableCell>
-                          </TableRow>
-                        )
-                      })}
-                    </TableBody>
-                  </Table>
                 </AccordionContent>
               </AccordionItem>
             ))}

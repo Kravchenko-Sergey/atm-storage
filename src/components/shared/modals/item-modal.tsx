@@ -1,36 +1,29 @@
 'use client'
 
+import { useParams } from 'next/navigation'
+import Container from '@/components/shared/container'
+import { useBoxesStore } from '@/store/boxes-store'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
-import { useParams, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Description } from '@radix-ui/react-dialog'
-import { useStorageStore } from '@/store/storage-store'
-import Container from '@/components/shared/container'
 import Image from 'next/image'
+import { router } from 'next/client'
 
 interface Props {
   className?: string
 }
 
 export default function ItemModal({ className }: Props) {
-  const router = useRouter()
+  const boxes = useBoxesStore(state => state.boxes)
   const { id } = useParams<{ id: string }>()
-  const storage = useStorageStore(state => state.storage)
 
-  const allItems = storage.flatMap(el => el.items.map(item => item))
+  const allItems = boxes.flatMap(el => el.items.map(item => item))
 
   const item = allItems.filter(item => item.id === id)[0]
 
-  const totalQuantity = storage
-    .filter(item1 => item1.items.some(subItem => subItem.name === item.name))
-    .map(item1 => item1.items.filter(subItem => subItem.name === item.name))
-    .flat()
-    .reduce((total, subItem) => total + subItem.quantity, 0)
+  const foundItem = boxes.flatMap(box => box.items).find(item => item.id === id)
 
-  const rackNumbers = storage
-    .filter(item1 => item1.items.some(subItem => subItem.name === item?.name))
-    .map(item => item.name)
-    .join(', ')
+  const foundBox = boxes.find(box => box.items.some(item => item.id === foundItem?.id))
 
   return (
     <Dialog open={true} onOpenChange={() => router.back()}>
@@ -38,22 +31,22 @@ export default function ItemModal({ className }: Props) {
         className={cn('p-4 max-w-[1060px] min-h-[500px] bg-white overflow-hidden flex flex-col', className)}
       >
         <DialogTitle className='h-[23px] flex items-end gap-4 '>
-          <span className='text-2xl font-extrabold'>{item.title}</span>
-          <Description className='text-xl font-bold'>{item.name}</Description>
+          <Description></Description>
         </DialogTitle>
-        <div onSubmit={() => router.back()}>
-          <Container className='h-[90%] flex items-start justify-between p-0 md:flex-col max-w-[1440px] m-auto'>
-            {item.image && <Image src={item.image} alt={item.name} width={240} height={240} className='self-center' />}
-            <div>
-              <div>В коробке: {item.quantity} шт.</div>
-              <div>Всего на складе: {totalQuantity} шт.</div>
-              <div>
-                <span>Находится на стеллаж{rackNumbers.length <= 2 ? 'е: ' : 'ах: '}</span>
-                <span>{rackNumbers}</span>
+        <Container className='h-[90%] flex items-start justify-between p-0 md:flex-col max-w-[1440px] m-auto'>
+          <div className='w-full flex flex-col items-center m-auto sm:flex-row '>
+            <Image src={item.image ?? ''} alt={item.name} width={240} height={240} className='self-center' />
+            <div className='flex flex-col items-center sm:items-start'>
+              <div className='my-4 flex items-center gap-4'>
+                <div className='text-2xl font-extrabold '>{item.brand}</div>
+                <div className='text-xl font-bold'>{item.model}</div>
               </div>
+              <div>SN: {item.sn}</div>
+              <div>Банк: {item.bank}</div>
+              <span>Находится в ящике: {foundBox?.title}</span>
             </div>
-          </Container>
-        </div>
+          </div>
+        </Container>
       </DialogContent>
     </Dialog>
   )

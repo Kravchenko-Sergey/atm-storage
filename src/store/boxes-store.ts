@@ -1,30 +1,153 @@
 import { create } from 'zustand'
 import { v4 } from 'uuid'
 
-type Item = {
+export type Item = {
   id: string
-  title: string
+  type: string
+  brand: string
+  model: string
   name: string
+  sn: string
+  bank: string
   image?: string
-  quantity: number
 }
 
-type Storage = {
+export type Box = {
   id: string
-  name: string
+  title: string
+  productName: string
+  sn: string
   image: string
   items: Item[]
 }
 
-type State = {
-  storage: Storage[]
+export type Cell = {
+  id: string
+  title: string
+  boxes: Box[]
 }
 
-export const useStorageStore = create<State>(set => ({
-  storage: [
+type State = {
+  boxes: Box[]
+}
+
+export const useBoxesStore = create<State>(set => ({
+  boxes: [
     {
       id: v4(),
-      name: 'A1',
+      title: 'A1-1',
+      productName: 'Ingenico desk/3500',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Ingenico desk/3500',
+          sn: '111',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        },
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Ingenico desk/3500',
+          sn: '222',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'A1-2',
+      productName: 'Ingenico desk/3500',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Ingenico desk/3500',
+          sn: '111',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        },
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Ingenico desk/3500',
+          sn: '222',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'A2-1',
+      productName: 'Ingenico desk/3500',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Ingenico desk/3500',
+          sn: '111',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        },
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Ingenico desk/3500',
+          sn: '222',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'A2-2',
+      productName: 'Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Pax s300',
+          sn: '111',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        },
+        {
+          id: v4(),
+          type: 'POS Terminal',
+          brand: 'Ingenico',
+          model: 'desk/3500',
+          name: 'Pax s300',
+          sn: '777',
+          bank: 'Sber',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    }
+    /*{
+      id: v4(),
+      title: 'A1-2',
       image: '/sber.webp',
       items: [
         { id: v4(), title: 'A1-1', name: 'Ingenico desk/3500', image: '/ingenico-desk-3500.webp', quantity: 7 },
@@ -32,8 +155,8 @@ export const useStorageStore = create<State>(set => ({
         { id: v4(), title: 'A1-3', name: 'Ingenico ict220', image: '/ingenico-ict-220.webp', quantity: 8 },
         { id: v4(), title: 'A1-4', name: 'Ingenico iwl220', image: '/ingenico-iwl-220.webp', quantity: 3 }
       ]
-    },
-    {
+    }*/
+    /*{
       id: v4(),
       name: 'A2',
       image: '/sber.webp',
@@ -792,20 +915,6 @@ export const useStorageStore = create<State>(set => ({
       name: 'W4',
       image: '/sber.webp',
       items: []
-    }
-  ],
-  changeQuantity: (itemId: string, id: string, newValue: number) =>
-    set(state => ({
-      storage: state.storage.map(item =>
-        item.id === itemId
-          ? { ...item, items: item.items.map(item2 => (item2.id === id ? { ...item2, quantity: newValue } : item2)) }
-          : item
-      )
-    })),
-  removeItem: (itemId: string, id: string) =>
-    set(state => ({
-      storage: state.storage.map(item =>
-        item.id === itemId ? { ...item, items: item.items.filter(item2 => item2.id !== id) } : item
-      )
-    }))
+    }*/
+  ]
 }))
