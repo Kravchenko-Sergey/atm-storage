@@ -20,7 +20,7 @@ export default function Header() {
     .flatMap(box => box.items)
     .filter(
       item =>
-        item.name.toLowerCase().includes(searchValue.toLowerCase()) |
+        item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
         item.sn?.toLowerCase().includes(searchValue.toLowerCase())
     )
     .slice(0, 6)
