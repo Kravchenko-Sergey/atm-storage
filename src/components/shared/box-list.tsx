@@ -54,7 +54,7 @@ export default function BoxList({ title }: Props) {
         id: item.id,
         title: item.title,
         productName: item.productName,
-        sn: item.sn,
+        sn: item.sn ?? '',
         image: item.image,
         items: item.items
       })
