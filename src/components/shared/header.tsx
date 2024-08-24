@@ -21,9 +21,11 @@ export default function Header() {
     .filter(
       item =>
         item.name.toLowerCase().includes(searchValue.toLowerCase()) |
-        item.sn.toLowerCase().includes(searchValue.toLowerCase())
+        item.sn?.toLowerCase().includes(searchValue.toLowerCase())
     )
     .slice(0, 6)
+
+  const uniqueItems = Array.from(new Map(allItems.map(item => [item.name, item])).values())
 
   const handleClickItem = (id: string) => {
     router.push(`/item/${id}`)
@@ -59,14 +61,14 @@ export default function Header() {
               className='rounded-md outline-none w-full bg-gray-100 pl-11'
             />
 
-            {allItems.length > 0 && (
+            {uniqueItems.length > 0 && (
               <div
                 className={cn(
                   'absolute w-full bg-white rounded-xl py-2 top-14 shadow-md transition-all duration-200 invisible opacity-0 z-30',
                   focused && 'visible opacity-100 top-12'
                 )}
               >
-                {allItems.map((item: Item) => {
+                {uniqueItems.map((item: Item) => {
                   return (
                     <div
                       key={item.id}

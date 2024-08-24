@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { cn } from '@/lib/utils'
 import { Description } from '@radix-ui/react-dialog'
 import Image from 'next/image'
-import { router } from 'next/client'
+import { useRouter } from 'next/navigation'
 
 interface Props {
   className?: string
@@ -16,6 +16,7 @@ interface Props {
 export default function ItemModal({ className }: Props) {
   const boxes = useBoxesStore(state => state.boxes)
   const { id } = useParams<{ id: string }>()
+  const router = useRouter()
 
   const allItems = boxes.flatMap(el => el.items.map(item => item))
 
@@ -35,15 +36,29 @@ export default function ItemModal({ className }: Props) {
         </DialogTitle>
         <Container className='h-[90%] flex items-start justify-between p-0 md:flex-col max-w-[1440px] m-auto'>
           <div className='w-full flex flex-col items-center m-auto sm:flex-row '>
-            <Image src={item.image ?? ''} alt={item.name} width={240} height={240} className='self-center' />
+            <Image src={item.image ?? ''} alt={item.name} width={340} height={340} className='self-center' />
             <div className='flex flex-col items-center sm:items-start'>
-              <div className='my-4 flex items-center gap-4'>
-                <div className='text-2xl font-extrabold '>{item.brand}</div>
-                <div className='text-xl font-bold'>{item.model}</div>
-              </div>
-              <div>SN: {item.sn}</div>
-              <div>Банк: {item.bank}</div>
-              <span>Находится в ящике: {foundBox?.title}</span>
+              {item.sn ? (
+                <div className='my-4 flex items-center gap-4 sm:flex-col sm:gap-1 sm:items-start'>
+                  <div className='text-4xl font-extrabold '>{item.brand}</div>
+                  <div className='text-xl font-bold'>{item.model}</div>
+                </div>
+              ) : (
+                <div className='pb-2 font-bold'>{item.name}</div>
+              )}
+              {item.sn && (
+                <div>
+                  <span>SN:</span> <span className='font-bold'>{item.sn}</span>
+                </div>
+              )}
+              {item.sn && (
+                <div>
+                  <span>Банк:</span> <span className='font-bold'>{item.bank}</span>
+                </div>
+              )}
+              <span>
+                <span>Находится в ящике:</span> <span className='font-bold'>{foundBox?.title}</span>
+              </span>
             </div>
           </div>
         </Container>

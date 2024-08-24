@@ -4,7 +4,7 @@ import Container from '@/components/shared/container'
 export default function ItemModalPage() {
   return (
     <Container className='flex flex-col my-10'>
-      <BoxModal className='w-[92%] rounded-md' />
+      <BoxModal className='w-[92%] max-h-[92%] rounded-md' />
     </Container>
   )
 }
