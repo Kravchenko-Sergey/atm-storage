@@ -18,8 +18,6 @@ type Storage = {
 
 type State = {
   storage: Storage[]
-  changeQuantity: (itemId: string, id: string, newValue: number) => void
-  removeItem: (itemId: string, id: string) => void
 }
 
 export const useStorageStore = create<State>(set => ({
@@ -188,9 +186,7 @@ export const useStorageStore = create<State>(set => ({
       id: v4(),
       name: 'D4',
       image: '/sber.webp',
-      items: [
-        { id: v4(), title: 'D4-1', name: 'Эвотор САЛЮТ-12Ф', image: '/tactilion.webp', quantity: 10 },
-      ]
+      items: [{ id: v4(), title: 'D4-1', name: 'Эвотор САЛЮТ-12Ф', image: '/tactilion.webp', quantity: 10 }]
     },
     {
       id: v4(),
@@ -202,103 +198,103 @@ export const useStorageStore = create<State>(set => ({
       id: v4(),
       name: 'E1',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'E1-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E1-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'E1-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 2 },
+        { id: v4(), title: 'E1-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 2 }
       ]
     },
     {
       id: v4(),
       name: 'E2',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'E2-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E2-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'E2-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'E2-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'E3',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'E3-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E3-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'E3-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'E3-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'E4',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'E4-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E4-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'E4-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'E4-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'E5',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'E5-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E5-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E5-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E5-4', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'E5-5', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'E5-6', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'E5-6', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'F1',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'F1-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'F1-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'F1-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'F1-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'F2',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'F2-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'F2-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'F2-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'F2-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'F3',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'F3-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'F3-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'F3-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'F3-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'F4',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'F4-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'F4-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'F4-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'F4-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
       id: v4(),
       name: 'F5',
       image: '/sber.webp',
-      items: [ 
+      items: [
         { id: v4(), title: 'F5-1', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
         { id: v4(), title: 'F5-2', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
-        { id: v4(), title: 'F5-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 },
+        { id: v4(), title: 'F5-3', name: 'Kozen P12 C-Graphite', image: '/kozen-p12-c-graphite.webp', quantity: 6 }
       ]
     },
     {
@@ -311,9 +307,7 @@ export const useStorageStore = create<State>(set => ({
       id: v4(),
       name: 'G2',
       image: '/sber.webp',
-      items: [
-        { id: v4(), title: 'G2-1', name: 'Стойка короткая под КБ', image: '/tactilion.webp', quantity: 32 },
-      ]
+      items: [{ id: v4(), title: 'G2-1', name: 'Стойка короткая под КБ', image: '/tactilion.webp', quantity: 32 }]
     },
     {
       id: v4(),
@@ -798,7 +792,7 @@ export const useStorageStore = create<State>(set => ({
       name: 'W4',
       image: '/sber.webp',
       items: []
-    },
+    }
   ],
   changeQuantity: (itemId: string, id: string, newValue: number) =>
     set(state => ({

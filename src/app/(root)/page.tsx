@@ -7,23 +7,20 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { useStorageStore } from '@/store/storage-store'
 import { useRouter } from 'next/navigation'
 import { useEngineerStore } from '@/store/engineer-store'
-import { CircleX, PackageOpen } from 'lucide-react'
-import { TextField } from '@/components/ui/text-field'
+import { PackageOpen } from 'lucide-react'
 
 export default function Home() {
   const router = useRouter()
 
   const storage = useStorageStore(state => state.storage)
   const engineers = useEngineerStore(state => state.engineers)
-  const changeQuantity = useStorageStore(state => state.changeQuantity)
-  const removeItem = useStorageStore(state => state.removeItem)
 
   return (
     <main>
       <Container className='md:max-w-[1440px] m-auto'>
         <div className='flex flex-col'>
           <h2 className='text-xl self-center'>Склад</h2>
-          <Accordion type='single' collapsible className='w-full'>
+          <Accordion type='single' collapsible>
             {storage.map((item: any, index) => (
               <AccordionItem key={item.id} value={`item-${index + 1}`}>
                 <AccordionTrigger>
@@ -46,18 +43,7 @@ export default function Home() {
                           return (
                             <TableRow key={item2.id}>
                               <TableCell onClick={() => router.push(`/item/${item2.id}`)}>{item2.name}</TableCell>
-                              <TableCell className='flex gap-4'>
-                                <TextField
-                                  type='number'
-                                  min={0}
-                                  max={1000}
-                                  defaultValue={item2.quantity}
-                                  onChange={e => changeQuantity(item.id, item2.id, Number(e.target.value))}
-                                />
-                              </TableCell>
-                              <TableCell onClick={() => removeItem(item.id, item2.id)} className='p-0'>
-                                <CircleX className='w-4 h-4 text-[#d03135]' />
-                              </TableCell>
+                              <TableCell className='flex gap-4'>{item2.quantity}</TableCell>
                             </TableRow>
                           )
                         })}
