@@ -45,7 +45,7 @@ export default function BoxModal({ className }: Props) {
         <Container className='h-[90%] flex items-start justify-between p-0 md:flex-col max-w-[1440px] m-auto'>
           <div className='w-full flex flex-col items-center m-auto sm:flex-row'>
             <Image
-              src={currentBox.items[0].image}
+              src={currentBox.items.length > 0 && currentBox.items[0].image ? currentBox.items[0].image : ''}
               alt={currentBox.items[0].name}
               width={340}
               height={340}
