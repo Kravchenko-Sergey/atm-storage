@@ -16,7 +16,7 @@ export type Box = {
   id: string
   title: string
   productName: string
-  sn: string
+  sn?: string
   image: string
   items: Item[]
 }
