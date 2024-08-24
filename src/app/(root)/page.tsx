@@ -21,7 +21,7 @@ export default function Home() {
 
       // Проверяем, существует ли уже объект с таким заголовком
 
-      let group = acc.find(g => g.title === titlePrefix)
+      let group = acc.find(g => g?.title === titlePrefix)
 
       if (!group) {
         // Если нет, создаем новый объект
