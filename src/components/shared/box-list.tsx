@@ -27,13 +27,12 @@ interface Props {
 }
 
 export default function BoxList({ title }: Props) {
-  const router = useRouter()
-
   const boxes = useBoxesStore(state => state.boxes)
+  const router = useRouter()
 
   const cells: Group[] =
     boxes &&
-    boxes.reduce((acc, item) => {
+    boxes.reduce<Group[]>((acc, item) => {
       const titlePrefix = item.title.split('-')[0] // Получаем префикс заголовка (например, "A1")
 
       // Проверяем, существует ли уже объект с таким заголовком
