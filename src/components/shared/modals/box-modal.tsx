@@ -4,10 +4,9 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { useParams, useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Description } from '@radix-ui/react-dialog'
-import { Item, useBoxesStore } from '@/store/boxes-store'
+import { useBoxesStore } from '@/store/boxes-store'
 import Container from '@/components/shared/container'
 import Image from 'next/image'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 
 interface Props {
   className?: string
@@ -32,7 +31,7 @@ export default function BoxModal({ className }: Props) {
     .filter((title, index, self) => self.indexOf(title) === index) // Удаляем дубликаты
     .join(', ') // Объединяем заголовки в строку
 
-  const itemsWithSN = currentBox.items.filter(item => item.sn)
+  //const itemsWithSN = currentBox.items.filter(item => item.sn)
 
   return (
     <Dialog open={true} onOpenChange={() => router.back()}>
@@ -69,7 +68,7 @@ export default function BoxModal({ className }: Props) {
               </div>
             </div>
           </div>
-          {itemsWithSN.length ? (
+          {/*{itemsWithSN.length ? (
             <Table>
               <TableHeader>
                 <TableRow>
@@ -90,7 +89,7 @@ export default function BoxModal({ className }: Props) {
             </Table>
           ) : (
             <div></div>
-          )}
+          )}*/}
         </Container>
       </DialogContent>
     </Dialog>
