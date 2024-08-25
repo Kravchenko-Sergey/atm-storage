@@ -35,7 +35,7 @@ export default function Header() {
   }
 
   return (
-    <header className='border-b'>
+    <header className='border-b dark:bg-gray-950'>
       <Container className='flex items-center justify-between py-4 md:flex-row max-w-[1440px] m-auto'>
         <Link href='/'>
           <div className='flex items-center gap-4'>
@@ -58,18 +58,17 @@ export default function Header() {
               onFocus={() => setFocused(true)}
               onBlur={() => setFocused(false)}
               placeholder='Искать на складе ...'
-              className='rounded-md outline-none w-full bg-gray-100 pl-11'
+              className='rounded-md outline-none w-full bg-gray-100 pl-11 dark:bg-gray-900'
             />
 
             {uniqueItems.length > 0 && (
               <div
                 className={cn(
-                  'absolute w-full bg-white rounded-xl py-2 top-14 shadow-md transition-all duration-200 invisible opacity-0 z-30',
+                  'absolute w-full bg-white rounded-xl py-2 top-14 shadow-md transition-all duration-200 invisible opacity-0 z-30 dark:bg-gray-900',
                   focused && 'visible opacity-100 top-12'
                 )}
               >
                 {uniqueItems.map((item: Item) => {
-                  console.log(item)
                   return (
                     <div
                       key={item.id}

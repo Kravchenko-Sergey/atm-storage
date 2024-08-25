@@ -36,13 +36,16 @@ export default function BoxModal({ className }: Props) {
   return (
     <Dialog open={true} onOpenChange={() => router.back()}>
       <DialogContent
-        className={cn('p-4 max-w-[1060px] min-h-[500px] max-h-[90%] bg-white overflow-auto flex flex-col', className)}
+        className={cn(
+          'p-4 max-w-[1060px] min-h-[500px] max-h-[90%] bg-white overflow-auto flex flex-col dark:bg-gray-900',
+          className
+        )}
       >
         <DialogTitle className='h-[23px] flex items-end gap-4 '>
           <Description></Description>
         </DialogTitle>
         <Container className='h-[90%] flex items-start justify-between p-0 md:flex-col max-w-[1440px] m-auto'>
-          <div className='w-full flex flex-col items-center m-auto sm:flex-row'>
+          <div className='w-full flex flex-col items-center m-auto gap-x-4 sm:flex-row'>
             <Image
               src={currentBox.items.length > 0 && currentBox.items[0].image ? currentBox.items[0].image : ''}
               alt={currentBox.items[0].name}

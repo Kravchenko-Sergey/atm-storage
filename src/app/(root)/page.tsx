@@ -1,3 +1,5 @@
+'use client'
+
 import Container from '@/components/shared/container'
 import BoxList from '@/components/shared/box-list'
 
