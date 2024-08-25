@@ -64,7 +64,7 @@ export default function BoxList({ title }: Props) {
 
   return (
     <div className='flex flex-col'>
-      <h2 className='text-xl self-center'>{title}</h2>
+      <h2 className='text-xl font-semibold self-center'>{title}</h2>
       <Accordion type='single' collapsible>
         {cells.map((cell: Cell, index) => (
           <AccordionItem key={cell.id} value={`item-${index + 1}`}>

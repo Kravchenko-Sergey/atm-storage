@@ -172,6 +172,294 @@ export const useBoxesStore = create<State>(set => ({
           image: '/ingenico-desk-3500.webp'
         }
       ]
+    },
+    {
+      id: v4(),
+      title: 'A3-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'A4-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'A5-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'B1-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'B2-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'B3-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'B4-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'B5-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'C1-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'C2-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'C3-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'C4-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'C5-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'D1-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'D2-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'D3-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'D4-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'D5-1',
+      productName: 'Провод для Pax s300',
+      image: '/sber.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'Provod',
+          brand: 'Pax',
+          model: 's300',
+          name: 'Провод для Pax s300',
+          image: '/ingenico-desk-3500.webp'
+        }
+      ]
     }
   ]
 }))

@@ -3,7 +3,7 @@
 import Container from '@/components/shared/container'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calculator, Search } from 'lucide-react'
+import { Cable, Calculator, Search } from 'lucide-react'
 import { TextField } from '@/components/ui/text-field'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
@@ -69,13 +69,18 @@ export default function Header() {
                 )}
               >
                 {uniqueItems.map((item: Item) => {
+                  console.log(item)
                   return (
                     <div
                       key={item.id}
                       className='flex items-center gap-3 px-3 py-2 hover:bg-primary/10 cursor-pointer'
                       onClick={() => handleClickItem(item.id)}
                     >
-                      <Calculator className='text-gray-400 rounded-sm h-6 w-6' />
+                      {item.type === 'POS Terminal' ? (
+                        <Calculator className='text-gray-500 rounded-sm h-6 w-6' />
+                      ) : (
+                        <Cable className='text-gray-500 rounded-sm h-6 w-6' />
+                      )}
                       <span>{item.name}</span>
                     </div>
                   )
