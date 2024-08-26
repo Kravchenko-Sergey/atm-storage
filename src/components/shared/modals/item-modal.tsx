@@ -31,13 +31,15 @@ export default function ItemModal({ className }: Props) {
 
   const rackNumbers = (sn: string | undefined) => {
     if (!sn || !sn.includes(searchValue) || !searchValue) {
-      return boxes
-        .filter(box => box.items.some(subItem => subItem.name === foundBox?.productName)) // Фильтруем боксы по productName
-        .map(box => box.title) // Извлекаем заголовки боксов
-        .filter((title, index, self) => self.indexOf(title) === index) // Удаляем дубликаты
-        .join(', ') // Объединяем заголовки в строку
+      return (
+        boxes
+          .filter(box => box.items.some(subItem => subItem.name === foundBox?.productName)) // Фильтруем боксы по productName
+          .map(box => box.title) // Извлекаем заголовки боксов
+          .filter((title, index, self) => self.indexOf(title) === index) // Удаляем дубликаты
+          .join(', ') ?? ''
+      ) // Объединяем заголовки в строку
     } else {
-      return foundBox?.title
+      return foundBox?.title ?? ''
     }
   }
 
