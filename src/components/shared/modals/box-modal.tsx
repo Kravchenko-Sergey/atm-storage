@@ -33,6 +33,8 @@ export default function BoxModal({ className }: Props) {
 
   //const itemsWithSN = currentBox.items.filter(item => item.sn)
 
+  console.log(currentBox)
+
   return (
     <Dialog open={true} onOpenChange={() => router.back()}>
       <DialogContent

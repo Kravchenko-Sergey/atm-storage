@@ -3,7 +3,17 @@
 import Container from '@/components/shared/container'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Cable, Calculator, Search } from 'lucide-react'
+import {
+  BatteryMedium,
+  Cable,
+  Calculator,
+  Dock,
+  LampFloor,
+  ReceiptText,
+  Scroll,
+  Search,
+  SmartphoneCharging
+} from 'lucide-react'
 import { TextField } from '@/components/ui/text-field'
 import { cn } from '@/lib/utils'
 import { useState } from 'react'
@@ -12,7 +22,9 @@ import { useRouter } from 'next/navigation'
 
 export default function Header() {
   const boxes = useBoxesStore(state => state.boxes)
-  const [searchValue, setSearchValue] = useState('')
+  const searchValue = useBoxesStore(state => state.searchValue)
+  const updateSearchValue = useBoxesStore(state => state.updateSearchValue)
+
   const [focused, setFocused] = useState(false)
   const router = useRouter()
 
@@ -31,7 +43,28 @@ export default function Header() {
     router.push(`/item/${id}`)
 
     setFocused(false)
-    setSearchValue('')
+    /*updateSearchValue('')*/
+  }
+
+  const typeIcon = (type: string) => {
+    switch (type) {
+      case 'terminal':
+        return <Calculator className='text-gray-500 rounded-sm h-6 w-6' />
+      case 'stand':
+        return <LampFloor className='text-gray-500 rounded-sm h-6 w-6' />
+      case 'cable':
+        return <Cable className='text-gray-500 rounded-sm h-6 w-6' />
+      case 'adapter':
+        return <SmartphoneCharging className='text-gray-500 rounded-sm h-6 w-6' />
+      case 'battery':
+        return <BatteryMedium className='text-gray-500 rounded-sm h-6 w-6' />
+      case 'sim card':
+        return <Dock className='text-gray-500 rounded-sm h-6 w-6' />
+      case 'receipt tape':
+        return <ReceiptText className='text-gray-500 rounded-sm h-6 w-6' />
+      default:
+        return <Scroll className='text-gray-500 rounded-sm h-6 w-6' />
+    }
   }
 
   return (
@@ -54,7 +87,7 @@ export default function Header() {
             <TextField
               type='text'
               value={searchValue}
-              onChange={e => setSearchValue(e.target.value)}
+              onChange={e => updateSearchValue(e.target.value)}
               onFocus={() => setFocused(true)}
               onBlur={() => setFocused(false)}
               placeholder='Искать на складе ...'
@@ -75,11 +108,7 @@ export default function Header() {
                       className='flex items-center gap-3 px-3 py-2 hover:bg-primary/10 cursor-pointer'
                       onClick={() => handleClickItem(item.id)}
                     >
-                      {item.type === 'POS Terminal' ? (
-                        <Calculator className='text-gray-500 rounded-sm h-6 w-6' />
-                      ) : (
-                        <Cable className='text-gray-500 rounded-sm h-6 w-6' />
-                      )}
+                      {typeIcon(item.type)}
                       <span>{item.name}</span>
                     </div>
                   )

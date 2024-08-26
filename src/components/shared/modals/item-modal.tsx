@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 import { Description } from '@radix-ui/react-dialog'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 interface Props {
   className?: string
@@ -15,6 +16,8 @@ interface Props {
 
 export default function ItemModal({ className }: Props) {
   const boxes = useBoxesStore(state => state.boxes)
+  const searchValue = useBoxesStore(state => state.searchValue)
+  const updateSearchValue = useBoxesStore(state => state.updateSearchValue)
   const { id } = useParams<{ id: string }>()
   const router = useRouter()
 
@@ -26,8 +29,26 @@ export default function ItemModal({ className }: Props) {
 
   const foundBox = boxes.find(box => box.items.some(item => item.id === foundItem?.id))
 
+  const rackNumbers = (sn: string | undefined) => {
+    if (!sn || !sn.includes(searchValue) || !searchValue) {
+      return boxes
+        .filter(box => box.items.some(subItem => subItem.name === foundBox?.productName)) // Фильтруем боксы по productName
+        .map(box => box.title) // Извлекаем заголовки боксов
+        .filter((title, index, self) => self.indexOf(title) === index) // Удаляем дубликаты
+        .join(', ') // Объединяем заголовки в строку
+    } else {
+      return foundBox?.title
+    }
+  }
+
   return (
-    <Dialog open={true} onOpenChange={() => router.back()}>
+    <Dialog
+      open={true}
+      onOpenChange={() => {
+        updateSearchValue('')
+        router.back()
+      }}
+    >
       <DialogContent
         className={cn(
           'p-4 max-w-[1060px] min-h-[500px] bg-white overflow-hidden flex flex-col dark:bg-gray-900',
@@ -59,9 +80,10 @@ export default function ItemModal({ className }: Props) {
                   <span>Банк:</span> <span className='font-bold'>{item.bank}</span>
                 </div>
               )}
-              <span>
-                <span>Находится в ящике:</span> <span className='font-bold'>{foundBox?.title}</span>
-              </span>
+              <div>
+                <span>Находится в ящик{rackNumbers(item.sn)?.length <= 4 ? 'е: ' : 'ах: '}</span>
+                <span>{rackNumbers(item.sn)}</span>
+              </div>
             </div>
           </div>
         </Container>
