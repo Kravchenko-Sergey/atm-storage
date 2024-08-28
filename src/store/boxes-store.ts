@@ -1281,6 +1281,124 @@ export const useBoxesStore = create<State>(set => ({
     },
     {
       id: v4(),
+      title: 'Q4-1',
+      productName: 'Pax D230',
+      image: '/alfa.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330631054',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330624090',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330630477',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330630494',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330338437',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330334125',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330328080',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330339458',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330631046',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330624510',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
       title: 'Q4-2',
       productName: 'Pax D230',
       image: '/alfa.webp',
