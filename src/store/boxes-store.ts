@@ -1281,6 +1281,641 @@ export const useBoxesStore = create<State>(set => ({
     },
     {
       id: v4(),
+      title: 'P5-1',
+      productName: 'Pax S200',
+      image: '/alfa.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E092222',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180229',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180242',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180212',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178816',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178814',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E101489',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180219',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178818',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180237',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E061330',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180211',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E089629',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E117625',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E182682',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178823',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178822',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178837',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E061327',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178840',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E182667',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178842',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178813',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E089617',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E098194',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E107324',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178844',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178815',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178826',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178830',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178819',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180239',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180230',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178841',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E125685',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E180222',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E089734',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178839',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E178825',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '56748796',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E086160',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E101488',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E089633',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E101493',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '56995700',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '56260213',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '56987669',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E086157',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E092224',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E092241',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E061328',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '56995680',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E086156',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E089630',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '56993091',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E125675',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S200',
+          name: 'Pax S200',
+          sn: '5E067385',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-s-200.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
       title: 'Q2-1',
       productName: 'Pax D230',
       image: '/alfa.webp',
@@ -1732,6 +2367,91 @@ export const useBoxesStore = create<State>(set => ({
           bank: 'Альфа-Банк',
           status: 'good',
           image: '/Pax-D230-wifi.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'Q2-3',
+      productName: 'Pax Q80s',
+      image: '/alfa.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'Q80s',
+          name: 'Pax Q80s',
+          sn: '0910005684',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-q80s.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'Q80s',
+          name: 'Pax Q80s',
+          sn: '0910005119',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-q80s.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'Q80s',
+          name: 'Pax Q80s',
+          sn: '0910003574',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-q80s.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'Q80s',
+          name: 'Pax Q80s',
+          sn: '0910003572',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-q80s.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'Q80s',
+          name: 'Pax Q80s',
+          sn: '0910003398',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-q80s.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'Q80s',
+          name: 'Pax Q80s',
+          sn: '0910011442',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-q80s.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'Q80s',
+          name: 'Pax Q80s',
+          sn: '0910003576',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/pax-q80s.webp'
         }
       ]
     },
@@ -2798,6 +3518,116 @@ export const useBoxesStore = create<State>(set => ({
           bank: 'Альфа-Банк',
           status: 'good',
           image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330335102',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330338443',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330339462',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330335096',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330339452',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330335494',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330335103',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330624085',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330334137',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230',
+          name: 'Pax D230',
+          sn: '2330335092',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
         }
       ]
     },
@@ -3350,6 +4180,28 @@ export const useBoxesStore = create<State>(set => ({
           model: 'D230 wifi',
           name: 'Pax D230 wifi',
           sn: '2330688825',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230 wifi',
+          name: 'Pax D230 wifi',
+          sn: '2330485502',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-D230-wifi.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'D230 wifi',
+          name: 'Pax D230 wifi',
+          sn: '2330313147',
           bank: 'Альфа-Банк',
           status: 'good',
           image: '/Pax-D230-wifi.webp'
@@ -5538,438 +6390,490 @@ export const useBoxesStore = create<State>(set => ({
     },
     {
       id: v4(),
-      title: 'P5-1',
-      productName: 'Pax S200',
+      title: 'R4-3',
+      productName: 'Pax S800',
       image: '/alfa.webp',
       items: [
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E092222',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54848106',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180229',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54860693',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180242',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54864619',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180212',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54856165',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178816',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54858452',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178814',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54864744',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E101489',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54858447',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180219',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54862572',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178818',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54859000',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180237',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54865050',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E061330',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54865025',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180211',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54855898',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E089629',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54864621',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E117625',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54858448',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E182682',
+          model: 'S800',
+          name: 'Pax S800',
+          sn: '54864618',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/pax-s800.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'R5-2',
+      productName: 'Pax S920',
+      image: '/alfa.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P142896',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178823',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N041786',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178822',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P136546',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178837',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N547752',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E061327',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N774713',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178840',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P142905',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E182667',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P477897',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178842',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N547756',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178813',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N700790',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E089617',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N546893',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E098194',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P863565',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E107324',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P361297',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178844',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P136534',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178815',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P863557',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178826',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N759226',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178830',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P133106',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178819',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '0681111947',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180239',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P136037',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180230',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P863053',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178841',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P361305',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E125685',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N771200',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E180222',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N771884',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E089734',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P309128',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178839',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P863559',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
         },
         {
           id: v4(),
           type: 'terminal',
           brand: 'Pax',
-          model: 'S200',
-          name: 'Pax S200',
-          sn: '5E178825',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6R085312',
           bank: 'Альфа-Банк',
           status: 'good',
-          image: '/pax-s-200.webp'
+          image: '/Pax-S920.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P133104',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-S920.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P137501',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-S920.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6P863569',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-S920.webp'
         }
       ]
     }
