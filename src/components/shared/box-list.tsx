@@ -64,13 +64,13 @@ export default function BoxList({ title }: Props) {
 
   return (
     <div className='flex flex-col '>
-      <h2 className='text-xl font-semibold self-center'>{title}</h2>
+      <h2 className='my-2 text-xl font-semibold self-center'>{title}</h2>
       <Accordion type='single' collapsible>
         {cells.map((cell: Cell, index) => (
           <AccordionItem key={cell.id} value={`item-${index + 1}`}>
             <AccordionTrigger>
               <div className='flex items-center justify-between gap-4'>
-                <span>{cell.title}</span>
+                <span className='min-w-6'>{cell.title}</span>
                 <Image src={cell.boxes[0].image} alt='Item image' width={24} height={24} className='rounded-sm' />
               </div>
             </AccordionTrigger>

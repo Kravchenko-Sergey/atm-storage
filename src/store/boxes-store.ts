@@ -3573,7 +3573,7 @@ export const useBoxesStore = create<State>(set => ({
           bank: 'Альфа-Банк',
           status: 'good',
           image: '/aisino-v37.webp'
-        },
+        }
       ]
     },
     {
@@ -8077,6 +8077,25 @@ export const useBoxesStore = create<State>(set => ({
           model: 'S920',
           name: 'Pax S920',
           sn: '6P863569',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-S920.webp'
+        }
+      ]
+    },
+    {
+      id: v4(),
+      title: 'BAD-1',
+      productName: 'All items',
+      image: '/bad.webp',
+      items: [
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N547759',
           bank: 'Альфа-Банк',
           status: 'good',
           image: '/Pax-S920.webp'
