@@ -8099,6 +8099,17 @@ export const useBoxesStore = create<State>(set => ({
           bank: 'Альфа-Банк',
           status: 'good',
           image: '/Pax-S920.webp'
+        },
+        {
+          id: v4(),
+          type: 'terminal',
+          brand: 'Pax',
+          model: 'S920',
+          name: 'Pax S920',
+          sn: '6N547759',
+          bank: 'Альфа-Банк',
+          status: 'good',
+          image: '/Pax-S920.webp'
         }
       ]
     }
